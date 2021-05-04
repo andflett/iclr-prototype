@@ -66,7 +66,7 @@ const MobileNavContext = (props) => {
 const DesktopNavContent = (props) => {
   return (
     <Flex className="nav-content__desktop" align="center" justify="space-between" {...props}>
-      <Box as="a" href="#" rel="home">
+      <Box pt="0.25rem" as="a" href="#" rel="home">
         <Image
             src="/images/logo.png"
             alt="ICLR Logo"
@@ -74,7 +74,7 @@ const DesktopNavContent = (props) => {
             height={35}
           />
       </Box>
-      <HStack as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">
+      <HStack pl="53%" as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">
         {links.map((link, idx) => (
           <Box as="li" key={idx} id={`nav__menuitem-${idx}`}>
             {link.children ? (
@@ -85,7 +85,7 @@ const DesktopNavContent = (props) => {
           </Box>
         ))}
       </HStack>
-      <HStack spacing="8" minW="240px" justify="space-between">
+      <HStack spacing="8" justify="space-between">
 
         <Menu>
           <MenuButton>

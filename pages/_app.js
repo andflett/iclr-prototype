@@ -19,6 +19,8 @@ import {
   InputRightElement,
   Wrap,
   WrapItem,
+  IconButton,
+  Tooltip,
   useColorModeValue as mode,
 } from '@chakra-ui/react'
 
@@ -39,7 +41,7 @@ function MyApp({ Component, pageProps }) {
         <title>ICLR Site Architecture</title>
         <meta name="description" content="ICLR Site Architecture" />
 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&display=swap" />
 
         <link rel="stylesheet"
@@ -48,16 +50,17 @@ function MyApp({ Component, pageProps }) {
 
       </Head>
 
-      <Box as="header" bg="black" position="relative" zIndex="10">
+      <Box as="header" py="3" bg="black" position="relative" zIndex="200">
         <Box
           as="nav"
           aria-label="Main navigation"
           maxW="7xl"
           mx="auto"
-          px={{
+          pl={{
             base: '6',
-            md: '8',
+            md: '4',
           }}
+          pr="6"
         >
           <NavContent.Mobile
             display={{
@@ -74,7 +77,7 @@ function MyApp({ Component, pageProps }) {
         </Box>
       </Box>
 
-      <Box p="8">
+      <Box px="10" py='7' boxShadow="base" position="relative" zIndex="100">
        <Box maxW="7xl" mx="auto">
          <Stack
            spacing="5"
@@ -88,15 +91,18 @@ function MyApp({ Component, pageProps }) {
              md: 'center',
            }}
          >
-           <Stack>
+           <Stack direction="row">
+
              <Image
                  src="/images/iclr3-dark.png"
                  alt="ICLR Logo"
                  width={95}
                  height={25}
                />
-             <Text color={mode('gray.600', 'gray.400')} fontSize="sm">
-               Search all topics
+             <Text pt="0.125rem" color={mode('gray.600', 'gray.400')} pl="10" fontSize="sm">
+               <Link fontWeight='500' color="green" ml="5" mr="7" >Browse all topics</Link>
+               <Link fontWeight='500'color="green" mr="7" >Case analysis</Link>
+               <Link fontWeight='500'color="green" mr="0">Legislation</Link>
              </Text>
            </Stack>
 
@@ -119,13 +125,30 @@ function MyApp({ Component, pageProps }) {
                w="full"
              >
                <InputRightElement color="gray.400">
-                 <ChakraAwesome icon={['fas', 'search']} />
+                 <ChakraAwesome icon={['far', 'search']} />
                </InputRightElement>
-               <Input bg={mode('white', 'gray.800')} placeholder="Search for contact" />
+               <Input bg={mode('white', 'gray.800')} placeholder="Search case law" />
              </InputGroup>
-             <Text>Help, full search, case analysis, browse, legislation</Text>
+
+              <Tooltip label="Advanced search" aria-label="Advanced search">
+                <Text cursor="pointer">
+                <IconButton aria-label="Search database" icon={<ChakraAwesome color="gray.500" fontSize="1.1rem" icon={['fal', 'list-alt']} />} />
+
+                </Text>
+
+              </Tooltip>
+              <Tooltip label="Search help" aria-label="Search help">
+
+                 <Text cursor="pointer">
+
+                  <IconButton aria-label="Search database" icon={<ChakraAwesome color="gray.500" fontSize="1.1rem" icon={['fal', 'question-circle']} />} />
+                 </Text>
+              </Tooltip>
+
+              <Box pl="1"></Box>
              <Button colorScheme="green" flexShrink={0} fontWeight="bold" fontSize="sm">
-               Preferences
+                <ChakraAwesome icon={['far', 'sliders-h']} mr="2" />
+               Personalise
              </Button>
            </HStack>
          </Stack>
@@ -147,7 +170,7 @@ function MyApp({ Component, pageProps }) {
           }}
           py={{
             base: '12',
-            md: '20',
+            md: '10',
           }}
         >
           <Flex
@@ -160,6 +183,7 @@ function MyApp({ Component, pageProps }) {
               base: '10',
               lg: '16',
             }}
+            pt="5"
             align="flex-start"
             id="top"
           >
@@ -245,10 +269,7 @@ function MyApp({ Component, pageProps }) {
             pt="10"
           >
 
-
-
           <Flex
-
             direction={{
               base: 'column-reverse',
               lg: 'row',
@@ -262,6 +283,7 @@ function MyApp({ Component, pageProps }) {
           >
 
             <Flex
+
               direction={{
                 base: 'column',
                 md: 'row',
@@ -272,7 +294,7 @@ function MyApp({ Component, pageProps }) {
               }}
               mt={{
                 base: '8',
-                lg: 0,
+                lg: 1,
               }}
               w={{
                 base: 'full',
@@ -289,7 +311,7 @@ function MyApp({ Component, pageProps }) {
 
                   {footerLinks.map((link, idx) => (
                     <WrapItem key={idx}>
-                      <Box fontWeight='500' as="a" href={link.href}>
+                      <Box fontWeight='600' as="a" href={link.href}>
                         {link.label}
                       </Box>
                     </WrapItem>

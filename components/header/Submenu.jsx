@@ -17,15 +17,15 @@ const DesktopSubmenu = (props) => {
         as="button"
         type="button"
         px="4"
+
         fontWeight="semibold"
         {...getTriggerProps()}
       >
         <Box>{link.label}</Box>
-        <ChakraAwesome icon={['far', 'angle-down']} ml="2" mt="1" />
       </NavLink.Desktop>
 
       <NavMenu {...getMenuProps()} animate={isOpen ? 'open' : 'closed'}>
-        <Box maxW="7xl" mx="auto" px="8">
+        <Box maxW="7xl" mx="auto" px="8" pt="6">
           <SimpleGrid spacing="10" columns={2}>
             {link.children?.map((item, idx) => (
               <DesktopMenuItem key={idx} title={item.label} href={item.href} icon={item.icon}>

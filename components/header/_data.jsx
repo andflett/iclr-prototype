@@ -5,42 +5,120 @@ export const links = [
   {
     label: 'About',
     href: '#',
+    children: [
+      {
+        label: 'Dolor sit amet',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        href: '#',
+        icon: <ChakraAwesome icon={['fas', 'book']} color="gray.200" />,
+      },
+      {
+        label: 'Consectetur adipiscing',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        href: '#',
+        icon: <ChakraAwesome icon={['fas', 'book']} color="gray.200"/>,
+      },
+      {
+        label: 'Lorem ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        href: '#',
+        icon: <ChakraAwesome icon={['fas', 'book']} color="gray.200"/>,
+      },
+      {
+        label: 'Ipsum dolor sit amet',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        href: '#',
+        icon: <ChakraAwesome icon={['fas', 'book']} color="gray.200"/>,
+      },
+    ],
   },
   {
     label: 'Products',
     href: '#',
+    children: [
+      {
+        label: 'Dolor sit amet',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        href: '#',
+        icon: <ChakraAwesome icon={['fas', 'book']} color="gray.200" />,
+      },
+      {
+        label: 'Consectetur adipiscing',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        href: '#',
+        icon: <ChakraAwesome icon={['fas', 'book']} color="gray.200"/>,
+      },
+      {
+        label: 'Lorem ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        href: '#',
+        icon: <ChakraAwesome icon={['fas', 'book']} color="gray.200"/>,
+      },
+      {
+        label: 'Ipsum dolor sit amet',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        href: '#',
+        icon: <ChakraAwesome icon={['fas', 'book']} color="gray.200"/>,
+      },
+    ],
   },
   {
     label: 'Knowledge',
     children: [
       {
-        label: 'Get Help',
-        description: 'Read our documentation and FAQs, or get in touch.',
+        label: 'Dolor sit amet',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         href: '#',
-        icon: <ChakraAwesome icon={['fas', 'user']} />,
+        icon: <ChakraAwesome icon={['fas', 'book']} color="gray.200" />,
       },
       {
-        label: 'Events & Meetups',
-        description: 'Discover and join your local Sketch community.',
+        label: 'Consectetur adipiscing',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         href: '#',
-        icon: <ChakraAwesome icon={['fas', 'user']} />,
+        icon: <ChakraAwesome icon={['fas', 'book']} color="gray.200"/>,
       },
       {
-        label: 'Extensions',
-        description: 'Do even more with Assistants, plugins and integrations.',
+        label: 'Lorem ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         href: '#',
-        icon: <ChakraAwesome icon={['fas', 'user']} />,
+        icon: <ChakraAwesome icon={['fas', 'book']} color="gray.200"/>,
       },
       {
-        label: 'Blog',
-        description: 'Get updates, articles and insights from the team.',
+        label: 'Ipsum dolor sit amet',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         href: '#',
-        icon: <ChakraAwesome icon={['fas', 'user']} />,
+        icon: <ChakraAwesome icon={['fas', 'book']} color="gray.200"/>,
       },
     ],
   },
   {
     label: 'Blog',
     href: '#',
+    children: [
+      {
+        label: 'Dolor sit amet',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        href: '#',
+        icon: <ChakraAwesome icon={['fas', 'book']} color="gray.200" />,
+      },
+      {
+        label: 'Consectetur adipiscing',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        href: '#',
+        icon: <ChakraAwesome icon={['fas', 'book']} color="gray.200"/>,
+      },
+      {
+        label: 'Lorem ipsum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        href: '#',
+        icon: <ChakraAwesome icon={['fas', 'book']} color="gray.200"/>,
+      },
+      {
+        label: 'Ipsum dolor sit amet',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        href: '#',
+        icon: <ChakraAwesome icon={['fas', 'book']} color="gray.200"/>,
+      },
+    ],
   },
 ]
