@@ -6,7 +6,6 @@ export const MotionDiv = motion(chakra.div)
 const variants = {
   init: {
     opacity: 0,
-    y: -4,
     display: 'none',
     transition: {
       duration: 0,
@@ -14,7 +13,6 @@ const variants = {
   },
   open: {
     opacity: 1,
-    y: 0,
     display: 'block',
     transition: {
       duration: 0.15,
@@ -22,7 +20,6 @@ const variants = {
   },
   closed: {
     opacity: 0,
-    y: -4,
     transition: {
       duration: 0.1,
     },
@@ -38,14 +35,28 @@ export const NavMenu = React.forwardRef((props, ref) => (
     variants={variants}
     outline="0"
     opacity="0"
+    marginTop="-0.25rem"
+    left="-6.25rem"
     bg={mode('white', 'gray.700')}
-    w="full"
     shadow="lg"
-    px="4"
+    minW="17rem"
+    borderRadius="md"
+    borderWidth="1px"
+    px="6"
     pos="absolute"
-    insetX="0"
     pt="6"
-    pb="12"
+    pb="6"
+    _before={{
+      content: `""`,
+      position: 'absolute',
+      width: '0px',
+      height: '0px',
+      left: '45%',
+      top: '-10px',
+      borderLeft: '10px solid transparent',
+      borderRight: '10px solid transparent',
+      borderBottom: '10px solid white'
+    }}
     {...props}
   />
 ))

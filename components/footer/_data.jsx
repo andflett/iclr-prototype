@@ -3,11 +3,32 @@ import * as React from 'react'
 
 export const links = [
   {
+    title: 'About',
+    links: [
+      {
+        label: 'About ICLR',
+        href: '/about',
+      },
+      {
+        label: 'History',
+        href: '/about',
+      },
+      {
+        label: 'Sponsorship',
+        href: '/about',
+      },
+      {
+        label: 'Contact',
+        href: '/about',
+      },
+    ],
+  },
+  {
     title: 'Products',
     links: [
       {
         label: 'ICLR.4',
-        href: '#',
+        href: '/products',
         badge: (
           <Badge colorScheme="green" variant="solid" fontSize="0.625rem">
             New
@@ -16,11 +37,11 @@ export const links = [
       },
       {
         label: 'Publications',
-        href: '#',
+        href: '/products',
       },
       {
         label: 'Support',
-        href: '#',
+        href: '/products',
       },
     ],
   },
@@ -28,28 +49,28 @@ export const links = [
     title: 'Knowledge',
     links: [
       {
-        label: 'Case law',
-        href: '#',
+        label: 'Case Law',
+        href: '/knowledge',
       },
       {
-        label: 'Legislation ',
-        href: '#',
+        label: 'Legislation',
+        href: '/knowledge',
       },
       {
         label: 'Topics',
-        href: '#',
+        href: '/knowledge',
       },
       {
         label: 'Guides',
-        href: '#',
+        href: '/knowledge',
       },
       {
         label: 'FAQs',
-        href: '#',
+        href: '/knowledge',
       },
       {
         label: 'Glossary',
-        href: '#',
+        href: '/knowledge',
       },
     ],
   },
@@ -57,48 +78,27 @@ export const links = [
     title: 'Blog',
     links: [
       {
-        label: 'Legal profession',
-        href: '#',
+        label: 'Legal Profession',
+        href: '/blog',
       },
       {
         label: 'Commentary',
-        href: '#',
+        href: '/blog',
       },
       {
         label: 'Weekly Notes',
-        href: '#',
+        href: '/blog',
       },
       {
         label: 'News and Events',
-        href: '#',
+        href: '/blog',
       },
       {
         label: 'Reviews',
-        href: '#',
+        href: '/blog',
       },
     ],
-  },
-  {
-    title: 'About',
-    links: [
-      {
-        label: 'About ICLR',
-        href: '#',
-      },
-      {
-        label: 'History',
-        href: '#',
-      },
-      {
-        label: 'Sponsorship',
-        href: '#',
-      },
-      {
-        label: 'Contact',
-        href: '#',
-      },
-    ],
-  },
+  }
 ]
 export const socialLinks = [
   {

@@ -1,5 +1,5 @@
 import { useNavMenu } from './useNavMenu'
-import { Box, Collapse, SimpleGrid, useDisclosure } from '@chakra-ui/react'
+import { InputGroup, InputRightElement, Input, Box, Collapse, SimpleGrid, useColorModeValue as mode, useDisclosure } from '@chakra-ui/react'
 import * as React from 'react'
 import { NavLink } from './NavLink'
 import { NavMenu } from './NavMenu'
@@ -17,7 +17,7 @@ const DesktopSubmenu = (props) => {
         as="button"
         type="button"
         px="4"
-
+        fontSize="sm"
         fontWeight="semibold"
         {...getTriggerProps()}
       >
@@ -25,14 +25,26 @@ const DesktopSubmenu = (props) => {
       </NavLink.Desktop>
 
       <NavMenu {...getMenuProps()} animate={isOpen ? 'open' : 'closed'}>
-        <Box maxW="7xl" mx="auto" px="8" pt="6">
-          <SimpleGrid spacing="10" columns={2}>
+        <Box >
+
+          { (link.label == 'Blog' || link.label == 'Knowledge') &&
+          <InputGroup w="full" mb="5">
+            <InputRightElement color="gray.400">
+              <ChakraAwesome icon={['far', 'search']} />
+            </InputRightElement>
+            <Input bg={mode('white', 'gray.800')} placeholder={ `Search ${link.label}...` } />
+          </InputGroup>
+          }
+
+          <SimpleGrid spacing="10" px="1" pt="2" pb="0.325rem" columns={1}>
             {link.children?.map((item, idx) => (
               <DesktopMenuItem key={idx} title={item.label} href={item.href} icon={item.icon}>
                 {item.description}
               </DesktopMenuItem>
             ))}
           </SimpleGrid>
+
+
         </Box>
       </NavMenu>
     </>

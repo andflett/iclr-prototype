@@ -21,6 +21,11 @@ import {
   WrapItem,
   IconButton,
   Tooltip,
+  Menu,
+  MenuList,
+  MenuButton,
+  MenuItem,
+  Avatar,
   useColorModeValue as mode,
 } from '@chakra-ui/react'
 
@@ -50,112 +55,34 @@ function MyApp({ Component, pageProps }) {
 
       </Head>
 
-      <Box as="header" py="3" bg="black" position="relative" zIndex="200">
-        <Box
-          as="nav"
-          aria-label="Main navigation"
-          maxW="7xl"
-          mx="auto"
-          pl={{
-            base: '6',
-            md: '4',
-          }}
-          pr="6"
-        >
-          <NavContent.Mobile
-            display={{
-              base: 'flex',
-              lg: 'none',
+        <Box as="header" py="0.5rem" bg="black" position="relative" zIndex="200">
+          <Box
+            as="nav"
+            aria-label="Main navigation"
+            maxW="7xl"
+            mx="auto"
+            pl={{
+              base: '6',
+              md: '4',
             }}
-          />
-          <NavContent.Desktop
-            display={{
-              base: 'none',
-              lg: 'flex',
-            }}
-          />
+            pr="6"
+          >
+            <NavContent.Mobile
+              display={{
+                base: 'flex',
+                lg: 'none',
+              }}
+            />
+            <NavContent.Desktop
+              display={{
+                base: 'none',
+                lg: 'flex',
+              }}
+            />
+          </Box>
         </Box>
-      </Box>
 
-      <Box px="10" py='7' boxShadow="base" position="relative" zIndex="100">
-       <Box maxW="7xl" mx="auto">
-         <Stack
-           spacing="5"
-           direction={{
-             base: 'column',
-             md: 'row',
-           }}
-           justify="space-between"
-           align={{
-             base: 'flex-start',
-             md: 'center',
-           }}
-         >
-           <Stack direction="row">
-
-             <Image
-                 src="/images/iclr3-dark.png"
-                 alt="ICLR Logo"
-                 width={95}
-                 height={25}
-               />
-             <Text pt="0.125rem" color={mode('gray.600', 'gray.400')} pl="10" fontSize="sm">
-               <Link fontWeight='500' color="green" ml="5" mr="7" >Browse all topics</Link>
-               <Link fontWeight='500'color="green" mr="7" >Case analysis</Link>
-               <Link fontWeight='500'color="green" mr="0">Legislation</Link>
-             </Text>
-           </Stack>
-
-           <HStack
-             justify="flex-end"
-             flex="1"
-             w={{
-               base: 'full',
-               md: 'auto',
-             }}
-             spacing={{
-               base: '2',
-               md: '4',
-             }}
-           >
-             <InputGroup
-               maxW={{
-                 md: '80',
-               }}
-               w="full"
-             >
-               <InputRightElement color="gray.400">
-                 <ChakraAwesome icon={['far', 'search']} />
-               </InputRightElement>
-               <Input bg={mode('white', 'gray.800')} placeholder="Search case law" />
-             </InputGroup>
-
-              <Tooltip label="Advanced search" aria-label="Advanced search">
-                <Text cursor="pointer">
-                <IconButton aria-label="Search database" icon={<ChakraAwesome color="gray.500" fontSize="1.1rem" icon={['fal', 'list-alt']} />} />
-
-                </Text>
-
-              </Tooltip>
-              <Tooltip label="Search help" aria-label="Search help">
-
-                 <Text cursor="pointer">
-
-                  <IconButton aria-label="Search database" icon={<ChakraAwesome color="gray.500" fontSize="1.1rem" icon={['fal', 'question-circle']} />} />
-                 </Text>
-              </Tooltip>
-
-              <Box pl="1"></Box>
-             <Button colorScheme="green" flexShrink={0} fontWeight="bold" fontSize="sm">
-                <ChakraAwesome icon={['far', 'sliders-h']} mr="2" />
-               Personalise
-             </Button>
-           </HStack>
-         </Stack>
-       </Box>
-     </Box>
-
-      <Component {...pageProps} />
+        <Component {...pageProps} />
 
       <Box as="footer" bg={mode('gray.50', 'gray.800')}>
         <Box
@@ -321,8 +248,6 @@ function MyApp({ Component, pageProps }) {
               </Box>
               <Spacer />
               <Box>
-
-
               <Image
                   src="/images/logo-dark.png"
                   alt="ICLR Logo"

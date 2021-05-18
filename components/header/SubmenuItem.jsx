@@ -1,4 +1,4 @@
-import { Box, Center, chakra, HStack, Text, useColorModeValue as mode } from '@chakra-ui/react'
+import { Square, Box, Center, chakra, HStack, Text, useColorModeValue as mode } from '@chakra-ui/react'
 import * as React from 'react'
 
 export const SubmenuItem = (props) => {
@@ -7,47 +7,44 @@ export const SubmenuItem = (props) => {
     <chakra.a
       className="group"
       href={href}
-      m="-3"
-      p="3"
+      m="-4"
+      py="2"
+      px="3"
       display="flex"
       alignItems="flex-start"
       transition="all 0.2s"
       rounded="lg"
       _hover={{
-        bg: mode('gray.50', 'gray.600'),
+        bg: mode('gray.100', 'gray.600'),
       }}
       _focus={{
         shadow: 'outline',
       }}
       {...rest}
     >
-      <Center
-        aria-hidden
-        as="span"
-        flexShrink={0}
-        w="10"
-        h="10"
-        fontSize="3xl"
-        color={mode('blue.600', 'blue.400')}
-      >
+      <Square
+      _groupHover={{
+        color: mode('green', 'inherit'),
+      }}
+        size="8" rounded="md"  color="green.500" fontSize="1.25rem">
         {icon}
-      </Center>
-      <Box marginStart="3" as="dl">
+      </Square>
+      <Box marginStart="4" as="dl">
         <HStack as="dt">
           <Text
-            fontWeight="semibold"
+            paddingTop="0.25rem"
+            fontWeight="500"
+            fontSize="0.9rem"
             color={mode('gray.900', 'white')}
             _groupHover={{
-              color: mode('blue.600', 'inherit'),
+              color: mode('gray.600', 'inherit'),
             }}
           >
             {title}
           </Text>
-          
+
         </HStack>
-        <Text as="dd" color={mode('gray.500', 'gray.400')}>
-          {children}
-        </Text>
+
       </Box>
     </chakra.a>
   )

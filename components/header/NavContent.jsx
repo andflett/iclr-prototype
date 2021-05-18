@@ -8,7 +8,11 @@ import {
   VisuallyHidden,
   useColorModeValue as mode,
 } from '@chakra-ui/react'
+
 import * as React from 'react'
+
+import Link from 'next/link'
+
 import { NavLink } from './NavLink'
 import { NavMenu } from './NavMenu'
 import { Submenu } from './Submenu'
@@ -34,16 +38,6 @@ const MobileNavContext = (props) => {
               height={35}
             />
         </Box>
-        <Box
-          visibility={{
-            base: 'hidden',
-            sm: 'visible',
-          }}
-        >
-          <Button as="a" colorScheme="green">
-            Get Started
-          </Button>
-        </Box>
       </Flex>
       <NavMenu animate={isOpen ? 'open' : 'closed'}>
         {links.map((link, idx) =>
@@ -55,9 +49,11 @@ const MobileNavContext = (props) => {
             </NavLink.Mobile>
           ),
         )}
-        <Button colorScheme="green" w="full" size="lg" mt="5">
-          Search ICLR.4
-        </Button>
+        <Link href="/">
+          <Button w="full" leftIcon={<ChakraAwesome icon={['far', 'search']} /> } colorScheme="green" fontWeight="bold" fontSize="lg" mt="5">
+            Search Case Law
+          </Button>
+        </Link>
       </NavMenu>
     </>
   )
@@ -66,6 +62,7 @@ const MobileNavContext = (props) => {
 const DesktopNavContent = (props) => {
   return (
     <Flex className="nav-content__desktop" align="center" justify="space-between" {...props}>
+
       <Box pt="0.25rem" as="a" href="#" rel="home">
         <Image
             src="/images/logo.png"
@@ -74,9 +71,9 @@ const DesktopNavContent = (props) => {
             height={35}
           />
       </Box>
-      <HStack pl="53%" as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">
+      <HStack as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">
         {links.map((link, idx) => (
-          <Box as="li" key={idx} id={`nav__menuitem-${idx}`}>
+          <Box position="relative" as="li" key={idx} id={`nav__menuitem-${idx}`}>
             {link.children ? (
               <Submenu.Desktop link={link} />
             ) : (
@@ -84,21 +81,15 @@ const DesktopNavContent = (props) => {
             )}
           </Box>
         ))}
+        <Box pl="5">
+          <Link href="/">
+            <Button leftIcon={<ChakraAwesome icon={['far', 'search']} /> } colorScheme="green" flexShrink={0} fontWeight="bold" fontSize="sm">
+              Search Case Law
+            </Button>
+          </Link>
+        </Box>
       </HStack>
-      <HStack spacing="8" justify="space-between">
 
-        <Menu>
-          <MenuButton>
-            <Avatar size="sm" bg="white" icon={<ChakraAwesome icon={['fas', 'user']} fontSize="1rem" />} />
-          </MenuButton>
-          <MenuList>
-            <MenuItem icon={<ChakraAwesome icon={['fas', 'bars']} />}>Personalise Feed</MenuItem>
-            <MenuItem icon={<ChakraAwesome icon={['fas', 'unlock']} />}>Change password</MenuItem>
-            <MenuItem icon={<ChakraAwesome icon={['fas', 'sign-out']} />}>Sign out</MenuItem>
-          </MenuList>
-        </Menu>
-
-      </HStack>
     </Flex>
   )
 }
