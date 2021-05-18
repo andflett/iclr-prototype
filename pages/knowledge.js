@@ -25,26 +25,38 @@ export default function Knowledge() {
 
         </Flex>
 
-        <Grid gap={5} mb="8" templateColumns="repeat(12, 1fr)" >
+        <Grid gap={10} mb="8" templateColumns="repeat(12, 1fr)" >
 
           <GridItem colSpan={9}>
 
-            <Flex>
-              <Box width="20%">
-                <Skeleton speed={2} height='10em' width='100%'>
 
-                </Skeleton>
-              </Box>
-              <Box width="75%" pl="5%">
-                <Stack>
-                  <Skeleton speed={2} height="20px" />
-                  <Skeleton speed={2} height="20px" />
-                  <Skeleton speed={2} height="20px" />
-                  <Skeleton speed={2} height="20px" />
-                  <Skeleton speed={2} height="20px" />
+                <Stack mb="10" borderBottomWidth="1px" pb="5" mb="5">
+                  <Skeleton speed={2} height="10px" />
+                  <Skeleton speed={2} height="10px" />
+                  <Skeleton speed={2} height="10px" />
+                  <Skeleton speed={2} height="10px" />
                 </Stack>
-              </Box>
-            </Flex>
+
+                <Stack mb="10" borderBottomWidth="1px" pb="5" mb="5">
+                  <Skeleton speed={2} height="10px" />
+                  <Skeleton speed={2} height="10px" />
+                  <Skeleton speed={2} height="10px" />
+                  <Skeleton speed={2} height="10px" />
+                </Stack>
+
+                <Stack mb="10" borderBottomWidth="1px" pb="5" mb="5">
+                  <Skeleton speed={2} height="10px" />
+                  <Skeleton speed={2} height="10px" />
+                  <Skeleton speed={2} height="10px" />
+                  <Skeleton speed={2} height="10px" />
+                </Stack>
+
+                <Stack mb="10" borderBottomWidth="1px" pb="5" mb="5">
+                  <Skeleton speed={2} height="10px" />
+                  <Skeleton speed={2} height="10px" />
+                  <Skeleton speed={2} height="10px" />
+                  <Skeleton speed={2} height="10px" />
+                </Stack>
 
           </GridItem>
 
@@ -56,7 +68,7 @@ export default function Knowledge() {
             <InputRightElement color="gray.400">
               <ChakraAwesome icon={['far', 'search']} />
             </InputRightElement>
-            <Input bg='white' placeholder="Search Knowledge Base" />
+            <Input bg='white' placeholder="Search Knowledge" />
           </InputGroup>
             <Stack>
               <Skeleton speed={2} height="10px" />
