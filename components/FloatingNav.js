@@ -10,41 +10,58 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  IconButton
+  IconButton,
+  VStack
 } from '@chakra-ui/react'
 
 export const FloatingNav = (props) => {
 
   return (
-    <Box>
-    <Menu>
-      <Tooltip label="Editorial Tools" aria-label="Editorial Tools">
+    <Box position="fixed" right="1.25rem" top="35%">
+      <VStack spacing="3">
 
-        <MenuButton>
+        <Menu>
+          <Tooltip label="Share or save" aria-label="Share or save" hasArrow="true" placement='left'>
+            <MenuButton>
+              <IconButton color="white" bg="purple" aria-label="Editorial Tools" icon={<ChakraAwesome color="white" icon={['fal', 'download']} />} />
+            </MenuButton>
+          </Tooltip>
 
-           <IconButton aria-label="Editorial Tools" icon={<ChakraAwesome color="gray.400" icon={['far', 'edit']} />} />
-        </MenuButton>
-        </Tooltip>
+          <MenuList fontSize="sm">
+            <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'file-pdf']} />}>Download PDF</MenuItem>
+            <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'envelope']} />}>Email Link</MenuItem>
+            <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'link']} />}>Copy Link</MenuItem>
+          </MenuList>
 
-        <MenuList fontSize="sm">
-          <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'edit']} />}>Index Cards</MenuItem>
-        </MenuList>
-      </Menu>
+        </Menu>
 
-      <Menu>
-      <Tooltip label="Administration" aria-label="Administration">
+        <Menu>
+          <Tooltip label="Editorial Tools" aria-label="Editorial Tools" hasArrow="true" placement='left'>
+            <MenuButton>
+              <IconButton color="white" bg="purple" aria-label="Editorial Tools" icon={<ChakraAwesome color="white" icon={['fal', 'edit']} />} />
+            </MenuButton>
+          </Tooltip>
 
-        <MenuButton>
-           <IconButton aria-label="Administration" icon={<ChakraAwesome color="gray.400" icon={['far', 'cogs']} />} />
-        </MenuButton>
-        </Tooltip>
+          <MenuList fontSize="sm">
+            <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'edit']} />}>Index Cards</MenuItem>
+          </MenuList>
 
-        <MenuList fontSize="sm">
-          <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'external-link-square']} />}>Create Exports</MenuItem>
-          <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'flag']} />}>Reports</MenuItem>
-          <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'chart-pie']} />}>Usage Stats</MenuItem>
-        </MenuList>
-      </Menu>
+        </Menu>
+
+        <Menu>
+          <Tooltip label="Administration" aria-label="Administration" hasArrow="true" placement='left'>
+            <MenuButton>
+               <IconButton bg="purple" aria-label="Administration" icon={<ChakraAwesome color="white" icon={['fal', 'cogs']} />} />
+            </MenuButton>
+          </Tooltip>
+
+          <MenuList fontSize="sm">
+            <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'external-link-square']} />}>Create Exports</MenuItem>
+            <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'flag']} />}>Reports</MenuItem>
+            <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'chart-pie']} />}>Usage Stats</MenuItem>
+          </MenuList>
+        </Menu>
+      </VStack>
 
     </Box>
   )

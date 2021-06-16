@@ -9,7 +9,7 @@ const DesktopNavLink = React.forwardRef((props, ref) => {
       px="5"
       py="2"
       my="4"
-      borderRadius="xl"
+      borderRadius="md"
       fontWeight="semibold"
       aria-current={active ? 'page' : undefined}
       color={mode('white', 'gray.400')}
