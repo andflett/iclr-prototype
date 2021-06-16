@@ -17,7 +17,7 @@ export default function Knowledge() {
           {links[2].children.map((link, idx) =>
             (
               <Box cursor="pointer">
-                <Box display="inline-block" mr="3" color='green.500'>{ link.icon }</Box>
+                <Box display="inline-block" mr="3" color='purple'>{ link.icon }</Box>
                 <Box display="inline-block" fontWeight="500" fontSize="sm">{ link.label }</Box>
               </Box>
             )
@@ -28,7 +28,6 @@ export default function Knowledge() {
         <Grid gap={10} mb="8" templateColumns="repeat(12, 1fr)" >
 
           <GridItem colSpan={9}>
-
 
                 <Stack mb="10" borderBottomWidth="1px" pb="5" mb="5">
                   <Skeleton speed={2} height="10px" />

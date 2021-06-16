@@ -29,6 +29,9 @@ import {
   useColorModeValue as mode,
 } from '@chakra-ui/react'
 
+
+import { useRouter } from 'next/router'
+
 import * as React from 'react'
 import { footerLinks, links, socialLinks } from '../components/footer/_data'
 import { LinkGroup } from '../components/footer/LinkGroup'
@@ -37,6 +40,8 @@ import { NavContent } from '../components/header/NavContent'
 import { Theme } from "../components/Theme";
 
 function MyApp({ Component, pageProps }) {
+
+  const router = useRouter()
 
   return (
     <ChakraProvider theme={Theme}>
@@ -74,6 +79,7 @@ function MyApp({ Component, pageProps }) {
               }}
             />
             <NavContent.Desktop
+              hideSearch={ router.asPath == '/' }
               display={{
                 base: 'none',
                 lg: 'flex',

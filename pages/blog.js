@@ -17,7 +17,7 @@ export default function Blog() {
           {links[3].children.map((link, idx) =>
             (
               <Box cursor="pointer">
-                <Box display="inline-block" mr="3" color='green.500'>{ link.icon }</Box>
+                <Box display="inline-block" mr="3" color='purple'>{ link.icon }</Box>
                 <Box display="inline-block" fontWeight="500" fontSize="sm">{ link.label }</Box>
               </Box>
             )

@@ -32,7 +32,7 @@ const DesktopSubmenu = (props) => {
             <InputRightElement color="gray.400">
               <ChakraAwesome icon={['far', 'search']} />
             </InputRightElement>
-            <Input bg={mode('white', 'gray.800')} placeholder={ `Search ${link.label}...` } />
+            <Input fontSize="sm" bg={mode('white', 'gray.800')} placeholder={ `Search ${link.label}...` } />
           </InputGroup>
           }
 

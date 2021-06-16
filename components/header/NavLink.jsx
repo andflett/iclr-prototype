@@ -6,22 +6,26 @@ const DesktopNavLink = React.forwardRef((props, ref) => {
     <chakra.a
       ref={ref}
       display="inline-block"
-      px="4"
-      py="6"
+      px="5"
+      py="2"
+      my="4"
+      borderRadius="xl"
       fontWeight="semibold"
       aria-current={active ? 'page' : undefined}
       color={mode('white', 'gray.400')}
       transition="all 0.2s"
       {...rest}
       _hover={{
-        color: 'green.400',
+        bg: 'purple',
+        color: 'white'
       }}
       _active={{
-        color: 'green.400',
+        bg: 'purple',
+        color: 'white'
       }}
       _activeLink={{
-        color: 'green.400',
-        fontWeight: 'bold',
+        bg: 'purple',
+        color: 'white'
       }}
     />
   )

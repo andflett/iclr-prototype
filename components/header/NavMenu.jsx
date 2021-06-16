@@ -35,7 +35,7 @@ export const NavMenu = React.forwardRef((props, ref) => (
     variants={variants}
     outline="0"
     opacity="0"
-    marginTop="-0.25rem"
+    marginTop="-0.2rem"
     left="-6.25rem"
     bg={mode('white', 'gray.700')}
     shadow="lg"

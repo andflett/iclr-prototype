@@ -30,7 +30,7 @@ export const links = [
         label: 'ICLR.4',
         href: '/products',
         badge: (
-          <Badge colorScheme="green" variant="solid" fontSize="0.625rem">
+          <Badge bg="purple" _hover={{ bg: 'purple' }} color="white" variant="solid" fontSize="0.625rem">
             New
           </Badge>
         ),

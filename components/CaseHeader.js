@@ -38,7 +38,7 @@ export const CaseHeader = (props) => {
          base: '6',
          md: '4',
        }}
-       pr="6"
+      pr="6"
       maxW="7xl"
       mx="auto">
        <Stack
@@ -55,15 +55,17 @@ export const CaseHeader = (props) => {
        >
          <Stack direction="row">
 
-            <Box mr="7.5rem" pt="0.45rem">
-           <Image
-               src="/images/iclr3-dark.png"
-               alt="ICLR Logo"
-               width={95}
-               height={25}
+           <Box mr="8rem" ml="3" pt="0.45rem">
+             <Image
+                 src="/images/iclr3-dark.png"
+                 alt="ICLR Logo"
+                 width={95}
+                 height={25}
 
-             />
-             </Box>
+               />
+           </Box>
+
+           <Spacer />
 
              <HStack
                justify="flex-end"
@@ -73,73 +75,53 @@ export const CaseHeader = (props) => {
                  md: 'auto',
                }}
                spacing={{
-                 base: '2',
-                 md: '4',
+                 base: '0',
+                 md: '0',
                }}
              >
-               <InputGroup
-
-                 w="20rem"
-               >
-                 <InputRightElement color="gray.400">
-                   <ChakraAwesome icon={['far', 'search']} />
+               <InputGroup w="25rem" mr="4">
+                 <InputRightElement color="purple">
+                   <ChakraAwesome icon={['fas', 'search']} />
                  </InputRightElement>
                  <Input bg={mode('white', 'gray.800')} placeholder="Search case law" />
                </InputGroup>
 
-                <Tooltip label="Advanced search" aria-label="Advanced search">
-                  <Text cursor="pointer">
-                    <Button fontSize="sm" color="gray.500" aria-label="Search database" leftIcon={<ChakraAwesome color="gray.500" fontSize="1.1rem" icon={['fal', 'list-alt']} />} >Advanced</Button>
-                  </Text>
-                </Tooltip>
+                <Text cursor="pointer">
+                  <Button
+                    fontSize="sm"
+                    color="gray.600"
+                    px="3"
+                    fontWeight='500'
+                    bg="transparent"
+                    aria-label="Search database" leftIcon={<ChakraAwesome color="purple"
+                    fontSize="1.1rem" icon={['fal', 'list-alt']} mr="0.3rem" />} >Full Search</Button>
+                </Text>
                 <Tooltip label="Search help" aria-label="Search help">
                    <Text cursor="pointer">
-                    <Button fontSize="sm" color="gray.500" aria-label="Search database" leftIcon={<ChakraAwesome color="gray.500" fontSize="1.1rem" icon={['fal', 'question-circle']} />}>Help</Button>
+                    <Button
+                      px="3"
+                      fontWeight='500'
+                      bg="transparent"
+                      fontSize="sm" color="gray.600"
+                      aria-label="Search database" leftIcon={<ChakraAwesome mr="0.3rem" color="purple" fontSize="1.1rem" icon={['fal', 'question-circle']} />}>Help</Button>
                    </Text>
                 </Tooltip>
+                <Button px="3" bg="transparent" flexShrink={0} fontWeight="500" color="gray.600"  fontSize="sm">
+                   <ChakraAwesome color="purple"  icon={['fal', 'file-search']} mr="0.625rem" />
+                  Case Analyser
+                </Button>
 
-               <Button colorScheme="green" flexShrink={0} fontWeight="bold" fontSize="sm">
-                  <ChakraAwesome icon={['far', 'file-search']} mr="2" />
-                 Case Analyser
-               </Button>
+
              </HStack>
 
          </Stack>
 
-         <HStack spacing="4" justify="space-between">
+         <HStack spacing="2" justify="space-between">
 
            <Menu>
-           <Tooltip label="Editorial Tools" aria-label="Editorial Tools">
-
-             <MenuButton>
-
-                <IconButton aria-label="Editorial Tools" icon={<ChakraAwesome color="gray.400" icon={['far', 'edit']} />} />
-             </MenuButton>
-             </Tooltip>
-
-             <MenuList fontSize="sm">
-               <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'edit']} />}>Index Cards</MenuItem>
-             </MenuList>
-           </Menu>
-
-           <Menu>
-           <Tooltip label="Administration" aria-label="Administration">
-
-             <MenuButton>
-                <IconButton aria-label="Administration" icon={<ChakraAwesome color="gray.400" icon={['far', 'cogs']} />} />
-             </MenuButton>
-             </Tooltip>
-
-             <MenuList fontSize="sm">
-               <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'external-link-square']} />}>Create Exports</MenuItem>
-               <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'flag']} />}>Reports</MenuItem>
-               <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'chart-pie']} />}>Usage Stats</MenuItem>
-             </MenuList>
-           </Menu>
-
-           <Menu>
-             <MenuButton>
-              <IconButton bg="black" aria-label="Editorial Tools" icon={<ChakraAwesome color="white" icon={['fas', 'user']} />} />
+             <MenuButton >
+              <IconButton bg="gray.50" borderColor="gray.200" borderWidth="1px" borderRadius="lg" aria-label="Editorial Tools" icon={
+                  <ChakraAwesome color="purple" icon={['fas', 'user']} />} />
              </MenuButton>
              <MenuList fontSize="sm">
                 <MenuGroup title="andrew@flett.cc">

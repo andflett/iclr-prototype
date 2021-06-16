@@ -6,6 +6,10 @@ import {
   Text,
   useDisclosure,
   VisuallyHidden,
+  InputGroup,
+  InputRightElement,
+  Input,
+  Spacer,
   useColorModeValue as mode,
 } from '@chakra-ui/react'
 
@@ -40,6 +44,7 @@ const MobileNavContext = (props) => {
         </Box>
       </Flex>
       <NavMenu animate={isOpen ? 'open' : 'closed'}>
+
         {links.map((link, idx) =>
           link.children ? (
             <Submenu.Mobile key={idx} link={link} />
@@ -49,11 +54,14 @@ const MobileNavContext = (props) => {
             </NavLink.Mobile>
           ),
         )}
-        <Link href="/">
-          <Button w="full" leftIcon={<ChakraAwesome icon={['far', 'search']} /> } colorScheme="green" fontWeight="bold" fontSize="lg" mt="5">
-            Search Case Law
-          </Button>
-        </Link>
+
+        <InputGroup w="15rem">
+          <InputRightElement color="gray.400">
+            <ChakraAwesome icon={['far', 'search']} />
+          </InputRightElement>
+          <Input bg={mode('white', 'gray.800')} placeholder="Search case law" />
+        </InputGroup>
+
       </NavMenu>
     </>
   )
@@ -61,9 +69,9 @@ const MobileNavContext = (props) => {
 
 const DesktopNavContent = (props) => {
   return (
-    <Flex className="nav-content__desktop" align="center" justify="space-between" {...props}>
+    <Flex className="nav-content__desktop" align="center" justify="" {...props}>
 
-      <Box pt="0.25rem" as="a" href="#" rel="home">
+      <Box pt="0.25rem" pl="2" as="a" href="/" rel="home">
         <Image
             src="/images/logo.png"
             alt="ICLR Logo"
@@ -71,6 +79,9 @@ const DesktopNavContent = (props) => {
             height={35}
           />
       </Box>
+
+      <Spacer />
+
       <HStack as="ul" id="nav__primary-menu" aria-label="Main Menu" listStyleType="none">
         {links.map((link, idx) => (
           <Box position="relative" as="li" key={idx} id={`nav__menuitem-${idx}`}>
@@ -81,14 +92,21 @@ const DesktopNavContent = (props) => {
             )}
           </Box>
         ))}
-        <Box pl="5">
-          <Link href="/">
-            <Button leftIcon={<ChakraAwesome icon={['far', 'search']} /> } colorScheme="green" flexShrink={0} fontWeight="bold" fontSize="sm">
-              Search Case Law
-            </Button>
-          </Link>
-        </Box>
+
       </HStack>
+
+      { !props.hideSearch &&
+        <form action="/">
+        <InputGroup w="15rem" ml="10">
+          <InputRightElement color="gray.400">
+            <Button type="submit" bg="white">
+              <ChakraAwesome icon={['far', 'search']} />
+            </Button>
+          </InputRightElement>
+          <Input fontSize="sm" bg={mode('white', 'gray.800')} placeholder="Search Case Law" />
+        </InputGroup>
+        </form>
+      }
 
     </Flex>
   )

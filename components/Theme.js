@@ -12,6 +12,10 @@ const Theme = extendTheme({
       'Red': '#C90061',
       'Blue': '#425390',
       'Green': '#00838A',
+      'Purple': '#7a4a87'
+    },
+    "purple": {
+      800: '#7a4a87'
     },
     "orange": {
       50: '#ffeae2',
