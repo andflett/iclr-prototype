@@ -116,12 +116,29 @@ export const CaseHeader = (props) => {
 
          </Stack>
 
-         <HStack spacing="2" justify="space-between">
+         <HStack spacing="4" justify="space-between">
+
+          <Menu>
+            <Tooltip label="Share or save" aria-label="Share or save" hasArrow="true" placement='bottom'>
+              
+              <MenuButton >
+                 <IconButton bg="gray.50" borderColor="gray.200" borderWidth="1px" borderRadius="lg" aria-label="Editorial Tools" icon={
+                <ChakraAwesome color="purple" icon={['fas', 'download']} />} />
+             </MenuButton>
+            </Tooltip>
+
+            <MenuList fontSize="sm">
+              <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'file-pdf']} />}>Download PDF</MenuItem>
+              <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'envelope']} />}>Email Link</MenuItem>
+              <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'link']} />}>Copy Link</MenuItem>
+            </MenuList>
+
+           </Menu>
 
            <Menu>
              <MenuButton >
-              <IconButton bg="gray.50" borderColor="gray.200" borderWidth="1px" borderRadius="lg" aria-label="Editorial Tools" icon={
-                  <ChakraAwesome color="purple" icon={['fas', 'user']} />} />
+                 <IconButton bg="gray.50" borderColor="gray.200" borderWidth="1px" borderRadius="lg" aria-label="Editorial Tools" icon={
+                <ChakraAwesome color="purple" icon={['fas', 'user']} />} />
              </MenuButton>
              <MenuList fontSize="sm">
                 <MenuGroup title="andrew@flett.cc">
@@ -131,6 +148,8 @@ export const CaseHeader = (props) => {
                </MenuGroup>
              </MenuList>
            </Menu>
+
+          
 
          </HStack>
        </Stack>

@@ -20,20 +20,7 @@ export const FloatingNav = (props) => {
     <Box position="fixed" right="1.25rem" top="35%">
       <VStack spacing="3">
 
-        <Menu>
-          <Tooltip label="Share or save" aria-label="Share or save" hasArrow="true" placement='left'>
-            <MenuButton>
-              <IconButton color="white" bg="purple" aria-label="Editorial Tools" icon={<ChakraAwesome color="white" icon={['fal', 'download']} />} />
-            </MenuButton>
-          </Tooltip>
-
-          <MenuList fontSize="sm">
-            <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'file-pdf']} />}>Download PDF</MenuItem>
-            <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'envelope']} />}>Email Link</MenuItem>
-            <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'link']} />}>Copy Link</MenuItem>
-          </MenuList>
-
-        </Menu>
+        
 
         <Menu>
           <Tooltip label="Editorial Tools" aria-label="Editorial Tools" hasArrow="true" placement='left'>
