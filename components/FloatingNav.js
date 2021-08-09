@@ -20,8 +20,7 @@ export const FloatingNav = (props) => {
     <Box position="fixed" right="1.25rem" top="35%">
       <VStack spacing="3">
 
-        
-
+    
         <Menu>
           <Tooltip label="Editorial Tools" aria-label="Editorial Tools" hasArrow="true" placement='left'>
             <MenuButton>
