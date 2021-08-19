@@ -30,17 +30,15 @@ export default function Home() {
             <Box width="80%" py="20">
               <ChakraAwesome icon={['fas', 'th-large']} fontSize="13em" color="gray.100" />
             </Box>
-            <Box width="20%" py="5" align="right">
+            <Box width="20%" py="7" align="right">
 
               <Box
                 borderColor="gray.200"
                 borderWidth="1px"
                 p="10"
-
                 borderRadius="md" align="center">
 
                 <ChakraAwesome mb="4" fontSize="4rem" color="purple" icon={['fai', 'genie']} />
-
                 <Heading size="md">Case Genie</Heading>
                 <Text mb="6">Upload a document to find similar cases.</Text>
 
