@@ -20,11 +20,10 @@ export const FloatingNav = (props) => {
     <Box position="fixed" right="1.25rem" top="35%">
       <VStack spacing="3">
 
-    
         <Menu>
           <Tooltip label="Editorial Tools" aria-label="Editorial Tools" hasArrow="true" placement='left'>
             <MenuButton>
-              <IconButton color="white" bg="purple" aria-label="Editorial Tools" icon={<ChakraAwesome color="white" icon={['fal', 'edit']} />} />
+              <IconButton color="white" bg="brand.purple" aria-label="Editorial Tools" icon={<ChakraAwesome color="white" icon={['fal', 'edit']} />} />
             </MenuButton>
           </Tooltip>
 
@@ -37,7 +36,7 @@ export const FloatingNav = (props) => {
         <Menu>
           <Tooltip label="Administration" aria-label="Administration" hasArrow="true" placement='left'>
             <MenuButton>
-               <IconButton bg="purple" aria-label="Administration" icon={<ChakraAwesome color="white" icon={['fal', 'cogs']} />} />
+              <IconButton bg="brand.purple" aria-label="Administration" icon={<ChakraAwesome color="white" icon={['fal', 'cogs']} />} />
             </MenuButton>
           </Tooltip>
 
@@ -46,6 +45,7 @@ export const FloatingNav = (props) => {
             <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'flag']} />}>Reports</MenuItem>
             <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'chart-pie']} />}>Usage Stats</MenuItem>
           </MenuList>
+
         </Menu>
       </VStack>
 

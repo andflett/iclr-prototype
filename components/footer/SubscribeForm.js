@@ -46,7 +46,7 @@ export const SubscribeForm = () => (
         roundedStart={{
           md: '0',
         }}
-        bg="purple"
+        bg="brand.purple"
         color="white"
         _hover={{ bg: 'purple' }}
         textTransform="uppercase"

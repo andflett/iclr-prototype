@@ -10,17 +10,17 @@ export default function Blog() {
 
       <Box bg="white">
 
-        <Heading fontSize="2.5rem" mb="10" fontFamily="Poppins">Blog</Heading>
+        <Heading fontSize="2.5rem" mb="10">Blog</Heading>
 
         <Flex justify='space-between' mb="10" borderBottomWidth="1px" pb="4">
 
           {links[3].children.map((link, idx) =>
-            (
-              <Box cursor="pointer">
-                <Box display="inline-block" mr="3" color='purple'>{ link.icon }</Box>
-                <Box display="inline-block" fontWeight="500" fontSize="sm">{ link.label }</Box>
-              </Box>
-            )
+          (
+            <Box cursor="pointer">
+              <Box display="inline-block" mr="3" color='purple'>{link.icon}</Box>
+              <Box display="inline-block" fontWeight="500" fontSize="sm">{link.label}</Box>
+            </Box>
+          )
           )}
 
         </Flex>
@@ -81,15 +81,15 @@ export default function Blog() {
           </GridItem>
 
           <GridItem colSpan={3}>
-          <InputGroup
-            mb="5"
-            w="full"
-          >
-            <InputRightElement color="gray.400">
-              <ChakraAwesome icon={['far', 'search']} />
-            </InputRightElement>
-            <Input bg='white' placeholder="Search Blog" />
-          </InputGroup>
+            <InputGroup
+              mb="5"
+              w="full"
+            >
+              <InputRightElement color="gray.400">
+                <ChakraAwesome icon={['far', 'search']} />
+              </InputRightElement>
+              <Input bg='white' placeholder="Search Blog" />
+            </InputGroup>
             <Stack>
               <Skeleton speed={2} height="10px" />
               <Skeleton speed={2} height="10px" />

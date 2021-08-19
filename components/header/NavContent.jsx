@@ -43,11 +43,11 @@ const MobileNavContext = (props) => {
         </Box>
         <Box as="a" rel="home" mx="auto">
           <Image
-              src="/images/logo.png"
-              alt="ICLR Logo"
-              width={95}
-              height={35}
-            />
+            src="/images/logo.png"
+            alt="ICLR Logo"
+            width={95}
+            height={35}
+          />
         </Box>
       </Flex>
       <NavMenu animate={isOpen ? 'open' : 'closed'}>
@@ -80,24 +80,24 @@ const DesktopNavContent = (props) => {
 
       <Box pt="0.25rem" pl="2" as="a" href="/" rel="home">
         <Image
-            src="/images/logo.png"
-            alt="ICLR Logo"
-            width={95}
-            height={35}
-          />
+          src="/images/logo.png"
+          alt="ICLR Logo"
+          width={95}
+          height={35}
+        />
       </Box>
 
-      { !props.hideSearch &&
+      {!props.hideSearch &&
         <Flex ml="7">
           <form action="/">
-          <InputGroup w="20rem" mr="3">
-            <InputLeftElement color="gray.400">
-              <Button type="submit" bg="white">
-                <ChakraAwesome icon={['far', 'search']} />
-              </Button>
-            </InputLeftElement>
-            <Input fontSize="sm" bg={mode('white', 'gray.800')} placeholder="Search Case Law" />
-          </InputGroup>
+            <InputGroup w="20rem" mr="3">
+              <InputLeftElement color="gray.400">
+                <Button type="submit" bg="white">
+                  <ChakraAwesome icon={['far', 'search']} />
+                </Button>
+              </InputLeftElement>
+              <Input fontSize="sm" bg={mode('white', 'gray.800')} placeholder="Search Case Law" />
+            </InputGroup>
           </form>
 
           <Menu>
@@ -111,9 +111,9 @@ const DesktopNavContent = (props) => {
             </Tooltip>
 
             <MenuList fontSize="sm">
-              <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'list-alt']} />}>Full Search</MenuItem>
-              <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'question-circle']} />}>Search Help</MenuItem>
-              <MenuItem icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'file-search']} />}>Case Analyser</MenuItem>
+              <MenuItem href="/entry" as="a" icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'list-alt']} />}>Full Search</MenuItem>
+              <MenuItem href="/entry" as="a" icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'question-circle']} />}>Search Help</MenuItem>
+              <MenuItem href="/entry" as="a" icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'file-search']} />}>Case Analyser</MenuItem>
             </MenuList>
 
           </Menu>

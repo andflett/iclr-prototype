@@ -10,7 +10,7 @@ export const links = [
         label: 'About ICLR',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         href: '/about',
-        icon: <ChakraAwesome icon={['fas', 'info-square']}  />,
+        icon: <ChakraAwesome icon={['fas', 'info-square']} />,
       },
       {
         label: 'History',
@@ -40,13 +40,13 @@ export const links = [
         label: 'ICLR.4',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         href: '/products',
-        icon: <ChakraAwesome icon={['fas', 'search']}  />,
+        icon: <ChakraAwesome icon={['fas', 'search']} />,
       },
       {
         label: 'Publications',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         href: '/products',
-        icon: <ChakraAwesome icon={['fas', 'books']}/>,
+        icon: <ChakraAwesome icon={['fas', 'books']} />,
       },
       {
         label: 'Support',
@@ -63,13 +63,13 @@ export const links = [
         label: 'Case Law',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         href: '/knowledge',
-        icon: <ChakraAwesome fixedWidth icon={['fas', 'gavel']}  />,
+        icon: <ChakraAwesome fixedWidth icon={['fas', 'balance-scale']} />,
       },
       {
         label: 'Legislation',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         href: '/knowledge',
-        icon: <ChakraAwesome fixedWidth icon={['fas', 'balance-scale']} />,
+        icon: <ChakraAwesome fixedWidth icon={['fas', 'landmark']} />,
       },
       {
         label: 'Topics',
@@ -105,7 +105,7 @@ export const links = [
         label: 'Legal Profession',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         href: '/blog',
-        icon: <ChakraAwesome icon={['fas', 'briefcase']}  />,
+        icon: <ChakraAwesome icon={['fas', 'briefcase']} />,
       },
       {
         label: 'Commentary',

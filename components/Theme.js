@@ -3,30 +3,30 @@ import { extendTheme } from "@chakra-ui/react"
 const Theme = extendTheme({
   fonts: {
     body: "Lato, Helvetica, sans-serif",
-    heading: "Poppins, Helvetica, sans-serif",
+    heading: "Raleway, Helvetica, sans-serif",
     mono: "Menlo, monospace"
   },
-  "colors": {
-    "brand": {
+  colors: {
+    brand: {
       'orange': '#FF5722',
       'red': '#E91E63',
       'Blue': '#00BCD4',
       'green': '#0e783b',
       'purple': '#7a4a87'
     },
-    "purple": {
+    purple: {
       50: '#fcedfe',
       100: '#e5cde8',
       200: '#cfacd4',
       300: '#b98cc1',
       400: '#a16bae',
-      500: '#865194',
+      500: '#7a4a87',
       600: '#6c3f74',
       700: '#502c53',
       800: '#341a33',
       900: '#160614',
     },
-    "orange": {
+    orange: {
       50: '#ffeedd',
       100: '#ffcbaf',
       200: '#ffa67e',
@@ -38,7 +38,7 @@ const Theme = extendTheme({
       800: '#4f2400',
       900: '#210d00',
     },
-    "red": {
+    red: {
       50: '#ffe4ed',
       100: '#fdb7c9',
       200: '#f68aa7',
@@ -50,7 +50,7 @@ const Theme = extendTheme({
       800: '#490209',
       900: '#1e0000',
     },
-    "blue": {
+    blue: {
       50: '#d6f8ff',
       100: '#aaecff',
       200: '#7ae4ff',
@@ -62,7 +62,7 @@ const Theme = extendTheme({
       800: '#00354f',
       900: '#00111e',
     },
-    "green": {
+    green: {
       50: '#e0fef5',
       100: '#b7f8e0',
       200: '#8df2c9',

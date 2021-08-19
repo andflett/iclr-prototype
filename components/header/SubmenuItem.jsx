@@ -23,10 +23,10 @@ export const SubmenuItem = (props) => {
       {...rest}
     >
       <Square
-      _groupHover={{
-        color: mode('purple', 'inherit'),
-      }}
-        size="8" rounded="md" color="purple" fontSize="1.25rem">
+        _groupHover={{
+          color: mode('purple', 'inherit'),
+        }}
+        size="8" rounded="md" color="brand.purple" fontSize="1.25rem">
         {icon}
       </Square>
       <Box marginStart="3" as="dl">
