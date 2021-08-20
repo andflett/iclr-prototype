@@ -9,49 +9,78 @@ export default function Home() {
     <>
       <CaseHeader showDownload={true} />
 
-      <Box bg="white" textAlign="center" py="4">
-        <Container maxW="3xl" py="10">
+      <Box bg="white" py="4">
+        <Container maxW="4xl" py="10" textAlign="center">
 
           <ChakraAwesome mb="3" fontSize="6rem" color="purple" icon={['fai', 'genie']} />
           <Heading size="lg" mb="10">Case Genie</Heading>
 
-          <Flex mb="5">
-            <Box width="45%" align="left" pl="5%">
+          <Flex mb="5" pt="2">
+            <Box width="45%" align="left">
               <Stack spacing="8">
                 <Box>
                   <Heading as="h2" size="sm" mb="2" >
-                    <ChakraAwesome icon={['fal', 'shield-check']} color="purple.400" mr="3" />
-                    Lorem
+                    <ChakraAwesome icon={['fal', 'bullseye-pointer']} color="purple.400" mr="3" />
+                    Intelligent
                   </Heading>
-                  <Text color="gray.600">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</Text>
+                  <Text color="gray.600">Case Genie uses artificial intelligence tools to analyse your text for legal concepts and recommend similar cases for research.</Text>
                 </Box>
                 <Box>
                   <Heading as="h2" size="sm" mb="2" >
-                    <ChakraAwesome icon={['fal', 'bullseye-pointer']} color="purple.400" mr="3" />
-                    Ipsum
+                    <ChakraAwesome icon={['fal', 'shield-check']} color="purple.400" mr="3" />
+                    Confidential
                   </Heading>
-                  <Text color="gray.600">Ut enim ad minim veniam, quis nostrud exercitation ullamco</Text>
+                  <Text color="gray.600">Your text is encrypted immediately and only retained for the duration of the session.</Text>
                 </Box>
                 <Box>
                   <Heading as="h2" size="sm" mb="2" >
                     <ChakraAwesome icon={['fal', 'layer-group']} color="purple.400" mr="3" />
-                    Cupidatat
+                    Comprehensive
                   </Heading>
-                  <Text color="gray.600">Sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+                  <Text color="gray.600">Your text is compared against our entire database of English judgments dating back to 1865.</Text>
                 </Box>
               </Stack>
 
             </Box>
-            <Spacer />
-            <Box width="50%" align="center" borderWidth="1px" borderStyle="dashed" borderColor="purple.300" borderRadius="lg" bg="purple.50" p="20">
-              <HStack spacing="5" align="center" justify="center" mb="5">
-                <ChakraAwesome icon={['fal', 'file-pdf']} color="purple.600" fontSize="1.325rem" />
-                <ChakraAwesome icon={['fal', 'file-word']} color="purple.600" fontSize="1.325rem" />
-                <ChakraAwesome icon={['fal', 'file-alt']} color="purple.600" fontSize="1.325rem" />
 
-              </HStack>
-              <Text color="gray.800">Drag document here or <Link color="purple.500" fontWeight="700">select a file</Link> from your computer</Text>
-            </Box>
+            <Spacer />
+
+            <Stack spacing="5" width="50%">
+
+              <Box
+                align="center"
+                borderWidth="1px"
+                borderStyle="dashed"
+                borderColor="purple.200"
+                borderRadius="md"
+                bg="purple.50"
+                p="7">
+                <HStack spacing="5" align="center" justify="center" mb="2">
+                  <ChakraAwesome icon={['fal', 'file-pdf']} color="purple.500" fontSize="1.325rem" />
+                  <ChakraAwesome icon={['fal', 'file-word']} color="purple.500" fontSize="1.325rem" />
+                  <ChakraAwesome icon={['fal', 'file-alt']} color="purple.500" fontSize="1.325rem" />
+
+                </HStack>
+                <Text color="gray.900" fontSize="0.9rem" px="20">Drop document or <Link color="purple.600" fontWeight="700">select a file</Link> to find similar cases.</Text>
+              </Box>
+
+              <Box
+                align="left"
+                borderWidth="1px"
+                borderColor="gray.200"
+                borderRadius="lg"
+                bg="white"
+                px="5"
+                minH="10rem"
+                py="4">
+                <Text color="gray.700" fontSize="0.9rem">
+                  <ChakraAwesome icon={['fal', 'paste']} mr="3" color="gray.400" />
+                  Or paste any legal text here...
+                </Text>
+              </Box>
+            </Stack>
+
+
           </Flex>
 
         </Container>
