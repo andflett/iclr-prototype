@@ -111,9 +111,9 @@ const DesktopNavContent = (props) => {
             </Tooltip>
 
             <MenuList fontSize="sm">
-              <MenuItem href="/entry" as="a" icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'list-alt']} />}>Full Search</MenuItem>
-              <MenuItem href="/entry" as="a" icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'question-circle']} />}>Search Help</MenuItem>
-              <MenuItem href="/entry" as="a" icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'file-search']} />}>Case Analyser</MenuItem>
+              <MenuItem href="/entry" as="a" icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'list-alt']} fontSize="1.1rem" mr="1" />}>Full Search</MenuItem>
+              <MenuItem href="/entry" as="a" icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fas', 'question-circle']} fontSize="1.1rem" mr="1" />}>Search Help</MenuItem>
+              <MenuItem href="/genie" as="a" icon={<ChakraAwesome color="gray.400" fixedWidth icon={['fai', 'lamp']} fontSize="1.1rem" mr="1" />}>Case Genie</MenuItem>
             </MenuList>
 
           </Menu>

@@ -32,7 +32,7 @@ import {
 export const CaseHeader = (props) => {
 
   return (
-    <Box bg="gray.50" py='7' boxShadow="lg" sx={{ position: '-webkit-sticky', /* Safari */ position: 'sticky', top: '0', }} zIndex="100">
+    <Box bg="gray.50" py='7' boxShadow="md" sx={{ position: '-webkit-sticky', /* Safari */ position: 'sticky', top: '0', }} zIndex="100">
       <Box
         pl={{
           base: '6',
