@@ -13,8 +13,8 @@ export default function Home() {
           pr="6"
           as="a"
           href="/genie"
-          _hover={{ bg: "purple.600" }}
-          bg="purple.500"
+          _hover={{ bg: "brand.purple" }}
+          bg="brand.purple"
           fontWeight="500"
           color="white"
           fontSize="sm">

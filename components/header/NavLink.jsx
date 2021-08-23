@@ -16,15 +16,15 @@ const DesktopNavLink = React.forwardRef((props, ref) => {
       transition="all 0.2s"
       {...rest}
       _hover={{
-        bg: 'purple',
+        bg: 'brand.purple',
         color: 'white'
       }}
       _active={{
-        bg: 'purple',
+        bg: 'brand.purple',
         color: 'white'
       }}
       _activeLink={{
-        bg: 'purple',
+        bg: 'brand.purple',
         color: 'white'
       }}
     />

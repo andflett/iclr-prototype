@@ -24,7 +24,7 @@ export const SubmenuItem = (props) => {
     >
       <Square
         _groupHover={{
-          color: mode('purple', 'inherit'),
+          color: mode('brand.purple', 'inherit'),
         }}
         size="8" rounded="md" color="brand.purple" fontSize="1.25rem">
         {icon}
