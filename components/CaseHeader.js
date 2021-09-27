@@ -55,7 +55,7 @@ export const CaseHeader = (props) => {
         >
           <Stack direction="row">
 
-            <Box mr="8rem" ml="3" pt="0.45rem">
+            <Box mr="1rem" ml="3" pt="0.45rem">
               <Image
                 src="/images/iclr3-dark.png"
                 alt="ICLR Logo"
@@ -65,13 +65,12 @@ export const CaseHeader = (props) => {
               />
             </Box>
 
-            <Spacer />
 
             <HStack
               justify="flex-end"
               flex="1"
               w={{
-                base: 'full',
+                base: 'auto',
                 md: 'auto',
               }}
               spacing={{
@@ -79,7 +78,7 @@ export const CaseHeader = (props) => {
                 md: '0',
               }}
             >
-              <InputGroup w="25rem" mr="4">
+              <InputGroup w="20rem" mr="4">
                 <InputRightElement color="brand.purple">
                   <ChakraAwesome icon={['fas', 'search']} />
                 </InputRightElement>
@@ -97,6 +96,16 @@ export const CaseHeader = (props) => {
                   href="/entry"
                   aria-label="Search database" leftIcon={<ChakraAwesome color="brand.purple"
                     fontSize="1.1rem" icon={['fal', 'list-alt']} mr="0.3rem" />} >Full Search</Button>
+              </Text>
+              <Text cursor="pointer">
+                <Button
+                  px="3"
+                  as="a"
+                  href="/entry"
+                  fontWeight='500'
+                  bg="transparent"
+                  fontSize="sm" color="gray.600"
+                  aria-label="Search database" leftIcon={<ChakraAwesome mr="0.3rem" color="brand.purple" fontSize="1.1rem" icon={['fal', 'list']} />}>Browse</Button>
               </Text>
               <Tooltip label="Search help" aria-label="Search help">
                 <Text cursor="pointer">

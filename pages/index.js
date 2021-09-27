@@ -19,6 +19,19 @@ export default function Home() {
           fontWeight="500"
           color="white"
           fontSize="sm">
+          <ChakraAwesome fontSize="0.9rem" color="white" icon={['fa', 'landmark']} mr="0.75rem" />
+          Legislation
+        </Button>
+        <Button
+          pl="3"
+          pr="6"
+          as="a"
+          href="/genie"
+          _hover={{ bg: "brand.purple" }}
+          bg="brand.purple"
+          fontWeight="500"
+          color="white"
+          fontSize="sm">
           <ChakraAwesome fontSize="0.9rem" color="white" icon={['fai', 'lamp']} mr="0.75rem" />
           Case Genie
         </Button>
