@@ -34,12 +34,11 @@ export const CaseHeader = (props) => {
   return (
     <Box bg="gray.50" py='7' boxShadow="md" sx={{ position: '-webkit-sticky', /* Safari */ position: 'sticky', top: '0', }} zIndex="100">
       <Box
-        pl={{
+        px={{
           base: '6',
-          md: '4',
+          md: '5',
         }}
-        pr="6"
-        maxW="7xl"
+        maxW="full"
         mx="auto">
         <Stack
           spacing="5"
@@ -66,68 +65,77 @@ export const CaseHeader = (props) => {
             </Box>
 
 
-            <HStack
-              justify="flex-end"
-              flex="1"
-              w={{
-                base: 'auto',
-                md: 'auto',
-              }}
-              spacing={{
-                base: '0',
-                md: '0',
-              }}
-            >
-              <InputGroup w="20rem" mr="4">
-                <InputRightElement color="brand.purple">
-                  <ChakraAwesome icon={['fas', 'search']} />
-                </InputRightElement>
-                <Input bg={mode('white', 'gray.800')} placeholder="Search case law" />
-              </InputGroup>
+            {!props.hideSearch &&
+              <HStack
+                justify="flex-end"
+                flex="1"
+                w={{
+                  base: 'auto',
+                  md: 'auto',
+                }}
+                spacing={{
+                  base: '0',
+                  md: '4',
+                }}
+              >
+                <InputGroup w="20rem" mr="0">
+                  <InputRightElement color="brand.purple">
+                    <ChakraAwesome icon={['fas', 'search']} />
+                  </InputRightElement>
+                  <Input bg={mode('white', 'gray.800')} placeholder="Search case law" />
+                </InputGroup>
 
-              <Text cursor="pointer">
-                <Button
-                  fontSize="sm"
-                  color="gray.600"
-                  px="3"
-                  fontWeight='500'
-                  bg="transparent"
-                  as="a"
-                  href="/entry"
-                  aria-label="Search database" leftIcon={<ChakraAwesome color="brand.purple"
-                    fontSize="1.1rem" icon={['fal', 'list-alt']} mr="0.3rem" />} >Full Search</Button>
-              </Text>
-              <Text cursor="pointer">
-                <Button
-                  px="3"
-                  as="a"
-                  href="/entry"
-                  fontWeight='500'
-                  bg="transparent"
-                  fontSize="sm" color="gray.600"
-                  aria-label="Search database" leftIcon={<ChakraAwesome mr="0.3rem" color="brand.purple" fontSize="1.1rem" icon={['fal', 'list']} />}>Browse</Button>
-              </Text>
-              <Tooltip label="Search help" aria-label="Search help">
+                <Text cursor="pointer">
+                  <Button
+                    fontSize="sm"
+                    color="gray.600"
+                    borderWidth="1px"
+                    borderColor="gray.200"
+                    px="3"
+                    fontWeight='500'
+                    bg="transparent"
+                    as="a"
+                    href="/entry"
+                    aria-label="Search database" leftIcon={<ChakraAwesome color="brand.purple"
+                      fontSize="1.1rem" icon={['fal', 'list-alt']} mr="0.3rem" />} >Full Search</Button>
+                </Text>
                 <Text cursor="pointer">
                   <Button
                     px="3"
                     as="a"
                     href="/entry"
+                    borderWidth="1px"
+                    borderColor="gray.200"
                     fontWeight='500'
                     bg="transparent"
                     fontSize="sm" color="gray.600"
-                    aria-label="Search database" leftIcon={<ChakraAwesome mr="0.3rem" color="brand.purple" fontSize="1.1rem" icon={['fal', 'question-circle']} />}>Help</Button>
+                    aria-label="Search database" leftIcon={<ChakraAwesome mr="0.3rem" color="brand.purple" fontSize="1.1rem" icon={['fal', 'list']} />}>Browse</Button>
                 </Text>
-              </Tooltip>
+                <Tooltip label="Search help" aria-label="Search help">
+                  <Text cursor="pointer">
+                    <Button
+                      px="3"
+                      as="a"
+                      href="/entry"
+                      borderWidth="1px"
+                      borderColor="gray.200"
+                      fontWeight='500'
+                      bg="transparent"
+                      fontSize="sm" color="gray.600"
+                      aria-label="Search database" leftIcon={<ChakraAwesome mr="0.2rem" color="brand.purple" fontSize="1.1rem" icon={['fal', 'question-circle']} />}>Help</Button>
+                  </Text>
+                </Tooltip>
 
+                {props.children}
 
-            </HStack>
+              </HStack>
+            }
 
           </Stack>
 
           <HStack spacing="4" justify="space-between">
 
-            {props.children}
+
 
             {props.showDownload &&
               <Menu>

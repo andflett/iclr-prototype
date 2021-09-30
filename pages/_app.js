@@ -64,13 +64,11 @@ function MyApp({ Component, pageProps }) {
         <Box
           as="nav"
           aria-label="Main navigation"
-          maxW="7xl"
-          mx="auto"
-          pl={{
+          px={{
             base: '6',
-            md: '4',
+            md: '5',
           }}
-          pr="6"
+          maxW="full"
         >
           <NavContent.Mobile
             display={{

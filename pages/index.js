@@ -10,29 +10,30 @@ export default function Home() {
 
       <CaseHeader>
         <Button
-          pl="3"
-          pr="6"
+          px="3"
           as="a"
-          href="/genie"
-          _hover={{ bg: "brand.purple" }}
-          bg="brand.purple"
-          fontWeight="500"
-          color="white"
-          fontSize="sm">
-          <ChakraAwesome fontSize="0.9rem" color="white" icon={['fa', 'landmark']} mr="0.75rem" />
+          href="/entry"
+          borderWidth="1px"
+          borderColor="gray.200"
+          fontWeight='500'
+          bg="transparent"
+          fontSize="sm"
+          pl="4"
+          color="gray.600">
+          <ChakraAwesome fontSize="0.9rem" color="purple.400" icon={['fa', 'landmark']} mr="0.75rem" />
           Legislation
         </Button>
         <Button
-          pl="3"
-          pr="6"
+          px="3"
           as="a"
-          href="/genie"
-          _hover={{ bg: "brand.purple" }}
-          bg="brand.purple"
-          fontWeight="500"
-          color="white"
-          fontSize="sm">
-          <ChakraAwesome fontSize="0.9rem" color="white" icon={['fai', 'lamp']} mr="0.75rem" />
+          href="/entry"
+          borderWidth="1px"
+          borderColor="gray.200"
+          fontWeight='500'
+          bg="transparent"
+
+          fontSize="sm" color="gray.600">
+          <ChakraAwesome fontSize="0.9rem" color="purple.400" icon={['fai', 'lamp']} mr="0.75rem" />
           Case Genie
         </Button>
       </CaseHeader>
@@ -51,7 +52,7 @@ export default function Home() {
                 p="10"
                 borderRadius="md" align="center">
 
-                <ChakraAwesome mb="4" fontSize="4rem" color="purple" icon={['fai', 'genie']} />
+                <ChakraAwesome mb="4" fontSize="4rem" color="purple.400" icon={['fai', 'genie']} />
                 <Heading size="md">Case Genie</Heading>
                 <Text mb="6">Upload a document to find similar cases.</Text>
 

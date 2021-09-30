@@ -12,7 +12,7 @@ const Theme = extendTheme({
       'red': '#E91E63',
       'Blue': '#00BCD4',
       'green': '#0e783b',
-      'purple': '#8e38a5'
+      'purple': '#9f56b3'
     },
     purple: {
       50: '#e3cde9',
