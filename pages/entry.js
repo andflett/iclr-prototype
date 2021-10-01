@@ -18,8 +18,8 @@ export default function Home() {
             py="5"
             px="5"
             width="275px" height="100vh" borderRight="1px" borderColor="gray.200">
-            <Box position="relative" bg="purple.400" p="5" mb="7" borderRadius="md" color="white">
-              <Heading display="flex" justify="space-between" fontSize="14px" borderBottomWidth="1px" borderColor="white" pb="3" mb="4">
+            <Box position="relative" bg="purple.300" p="5" mb="7" borderRadius="md" color="white">
+              <Heading display="flex" justify="space-between" fontSize="14px" borderBottomWidth="1px" borderColor="white" pb="3" mb="3">
                 <Text>Case Genie Results</Text>
                 <Spacer />
                 <Tooltip hasArrow label="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
@@ -49,7 +49,7 @@ export default function Home() {
                 </Flex>
 
                 <Flex>
-                  <Checkbox borderWidth="1px" borderColor="purple.500" borderRadius="2px" icon={<ChakraAwesome icon="times" />} isChecked={true} size="md" colorScheme="purple" />
+                  <Checkbox borderWidth="0px" borderColor="purple.400" borderRadius="3px" icon={<ChakraAwesome icon="times" />} isChecked={true} size="md" colorScheme="purple" />
 
                   <Text pl="0.6rem" pr="5" fontSize="xs" fontWeight="600">Include linked cases</Text>
                   <Spacer />

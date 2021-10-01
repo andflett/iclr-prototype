@@ -2,13 +2,56 @@ import ChakraAwesome from '../components/ChakraAwesome'
 import { CaseHeader } from '../components/CaseHeader'
 import { FloatingNav } from '../components/FloatingNav'
 
-import { Box, Flex, Button, Container, Stack, Heading, Text } from '@chakra-ui/react'
+import { Tooltip, Box, Flex, Button, Container, Stack, Heading, Text } from '@chakra-ui/react'
 
 export default function Home() {
   return (
     <>
 
       <CaseHeader>
+
+        <Text cursor="pointer">
+          <Button
+            fontSize="sm"
+            color="gray.600"
+            borderWidth="1px"
+            borderColor="gray.200"
+            px="3"
+            fontWeight='500'
+            bg="transparent"
+            as="a"
+            href="/entry"
+            aria-label="Search database" leftIcon={<ChakraAwesome color="brand.purple"
+              fontSize="1.1rem" icon={['fal', 'list-alt']} mr="0.3rem" />} >Full Search</Button>
+        </Text>
+
+        <Button
+          px="3"
+          as="a"
+          href="/entry"
+          borderWidth="1px"
+          borderColor="gray.200"
+          fontWeight='500'
+          bg="transparent"
+
+          fontSize="sm" color="gray.600">
+          <ChakraAwesome fontSize="0.9rem" color="purple.400" icon={['fai', 'lamp']} mr="0.75rem" />
+          Case Genie
+        </Button>
+
+        <Text cursor="pointer">
+          <Button
+            px="3"
+            as="a"
+            href="/entry"
+            borderWidth="1px"
+            borderColor="gray.200"
+            fontWeight='500'
+            bg="transparent"
+            fontSize="sm" color="gray.600"
+            aria-label="Browse" leftIcon={<ChakraAwesome mr="0.3rem" color="brand.purple" fontSize="1.1rem" icon={['fal', 'list']} />}>Browse</Button>
+        </Text>
+
         <Button
           px="3"
           as="a"
@@ -23,19 +66,24 @@ export default function Home() {
           <ChakraAwesome fontSize="0.9rem" color="purple.400" icon={['fa', 'landmark']} mr="0.75rem" />
           Legislation
         </Button>
-        <Button
-          px="3"
-          as="a"
-          href="/entry"
-          borderWidth="1px"
-          borderColor="gray.200"
-          fontWeight='500'
-          bg="transparent"
 
-          fontSize="sm" color="gray.600">
-          <ChakraAwesome fontSize="0.9rem" color="purple.400" icon={['fai', 'lamp']} mr="0.75rem" />
-          Case Genie
-        </Button>
+        <Tooltip label="Search help" aria-label="Search help">
+          <Text cursor="pointer">
+            <Button
+              px="3"
+              as="a"
+              href="/entry"
+              borderWidth="1px"
+              borderColor="gray.200"
+              fontWeight='500'
+              bg="transparent"
+              fontSize="sm" color="gray.600"
+              aria-label="Help" leftIcon={<ChakraAwesome mr="0.2rem" color="brand.purple" fontSize="1.1rem" icon={['fal', 'question-circle']} />}>Help</Button>
+          </Text>
+        </Tooltip>
+
+
+
       </CaseHeader>
 
       <Container maxW="7xl" bg="white" textAlign="center" py='6'>

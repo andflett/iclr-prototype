@@ -85,46 +85,7 @@ export const CaseHeader = (props) => {
                   <Input bg={mode('white', 'gray.800')} placeholder="Search case law" />
                 </InputGroup>
 
-                <Text cursor="pointer">
-                  <Button
-                    fontSize="sm"
-                    color="gray.600"
-                    borderWidth="1px"
-                    borderColor="gray.200"
-                    px="3"
-                    fontWeight='500'
-                    bg="transparent"
-                    as="a"
-                    href="/entry"
-                    aria-label="Search database" leftIcon={<ChakraAwesome color="brand.purple"
-                      fontSize="1.1rem" icon={['fal', 'list-alt']} mr="0.3rem" />} >Full Search</Button>
-                </Text>
-                <Text cursor="pointer">
-                  <Button
-                    px="3"
-                    as="a"
-                    href="/entry"
-                    borderWidth="1px"
-                    borderColor="gray.200"
-                    fontWeight='500'
-                    bg="transparent"
-                    fontSize="sm" color="gray.600"
-                    aria-label="Search database" leftIcon={<ChakraAwesome mr="0.3rem" color="brand.purple" fontSize="1.1rem" icon={['fal', 'list']} />}>Browse</Button>
-                </Text>
-                <Tooltip label="Search help" aria-label="Search help">
-                  <Text cursor="pointer">
-                    <Button
-                      px="3"
-                      as="a"
-                      href="/entry"
-                      borderWidth="1px"
-                      borderColor="gray.200"
-                      fontWeight='500'
-                      bg="transparent"
-                      fontSize="sm" color="gray.600"
-                      aria-label="Search database" leftIcon={<ChakraAwesome mr="0.2rem" color="brand.purple" fontSize="1.1rem" icon={['fal', 'question-circle']} />}>Help</Button>
-                  </Text>
-                </Tooltip>
+
 
                 {props.children}
 
