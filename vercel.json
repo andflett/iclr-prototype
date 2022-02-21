@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    { 
+      "source": "/",
+      "destination": "https://www.iclr.co.uk/pupillage", 
+      "permanent": true
+    }
+  ]
+}
