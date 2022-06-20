@@ -20,13 +20,17 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 
-export default function Knowledge() {
+export default function Article() {
   return (
     <Container maxW="container.xl" py="10" px="12">
       <Box bg="white">
-        <Heading fontSize="2.5rem" mb="10">
-          Case Law
+        <Heading fontSize="2.5rem" mb="2">
+          Knowledge
         </Heading>
+        <Text mb="10">
+          Reference and support materials for case law research and legal
+          education.
+        </Text>
 
         <Flex justify="space-between" mb="10" borderBottomWidth="1px" pb="4">
           {links[2].children.map((link, idx) => (
@@ -43,19 +47,18 @@ export default function Knowledge() {
 
         <Grid gap={5} templateColumns="repeat(12, 1fr)">
           <GridItem colSpan={9}>
-            <Stack spacing="5" pr="5">
-              <Link href="/article">
-                <Skeleton speed={2} height="100px" />
-              </Link>
-              <Link href="/article">
-                <Skeleton speed={2} height="100px" />
-              </Link>
-              <Link href="/article">
-                <Skeleton speed={2} height="100px" />
-              </Link>
-              <Link href="/article">
-                <Skeleton speed={2} height="100px" />
-              </Link>
+            <Stack pb="5" pr="5">
+              <Heading size="lg" mb="4">
+                Lorem ipsum dolor sit amet
+              </Heading>
+              <Skeleton speed={2} height="15px" />
+              <Skeleton speed={2} height="15px" />
+              <Skeleton speed={2} height="15px" />
+              <Skeleton speed={2} height="15px" />
+              <Skeleton speed={2} height="15px" />
+              <Skeleton speed={2} height="15px" />
+              <Skeleton speed={2} height="15px" />
+              <Skeleton speed={2} height="15px" />
             </Stack>
           </GridItem>
 
