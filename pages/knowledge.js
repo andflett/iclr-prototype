@@ -24,13 +24,31 @@ export default function Knowledge() {
   return (
     <Container maxW="container.xl" py="10" px="12">
       <Box bg="white">
-        <Heading fontSize="2.5rem" mb="10">
-          Case Law
+        <Heading fontSize="2.5rem" mb="2">
+          Knowledge
         </Heading>
+        <Text mb="8">
+          Reference and support materials for case law research and legal
+          education.
+        </Text>
 
-        <Flex justify="space-between" mb="10" borderBottomWidth="1px" pb="4">
+        <Flex
+          justify="space-between"
+          mb="10"
+          borderBottomWidth="1px"
+          borderColor="purple.50"
+        >
           {links[2].children.map((link, idx) => (
-            <Link href="/category" cursor="pointer">
+            <Link
+              href="/category"
+              cursor="pointer"
+              bg={"transparent"}
+              _hover={{ bg: "purple.50" }}
+              color="purple"
+              borderTopRadius={"md"}
+              px="10"
+              py="2"
+            >
               <Box display="inline-block" mr="3" color="purple">
                 {link.icon}
               </Box>
@@ -43,20 +61,27 @@ export default function Knowledge() {
 
         <Grid gap={5} templateColumns="repeat(12, 1fr)">
           <GridItem colSpan={9}>
-            <Stack spacing="5" pr="5">
-              <Link href="/article">
-                <Skeleton speed={2} height="100px" />
-              </Link>
-              <Link href="/article">
-                <Skeleton speed={2} height="100px" />
-              </Link>
-              <Link href="/article">
-                <Skeleton speed={2} height="100px" />
-              </Link>
-              <Link href="/article">
-                <Skeleton speed={2} height="100px" />
-              </Link>
-            </Stack>
+            <SimpleGrid columns={2} gap="10">
+              {links[2].children.map((link, idx) => (
+                <Stack pr="5">
+                  <Heading size="md" mb="4">
+                    <Link href="/article">{link.label}</Link>
+                  </Heading>
+                  <Link href="/article">
+                    <Skeleton speed={2} height="20px" />
+                  </Link>
+                  <Link href="/article">
+                    <Skeleton speed={2} height="20px" />
+                  </Link>
+                  <Link href="/article">
+                    <Skeleton speed={2} height="20px" />
+                  </Link>
+                  <Link href="/article">
+                    <Skeleton speed={2} height="20px" />
+                  </Link>
+                </Stack>
+              ))}
+            </SimpleGrid>
           </GridItem>
 
           <GridItem colSpan={3}>
