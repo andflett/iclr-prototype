@@ -27,27 +27,27 @@ export default function Article() {
         <Heading fontSize="2.5rem" mb="2">
           Knowledge
         </Heading>
-        <Text mb="9">
+        <Text mb="8">
           Reference and support materials for case law research and legal
           education.
         </Text>
 
-        <Flex
-          justify="space-between"
-          mb="10"
-          borderBottomWidth="1px"
-          borderColor="purple.50"
-        >
+        <Flex justify="space-between" mb="10" borderBottomWidth="1px">
           {links[2].children.map((link, idx) => (
             <Link
               href="/category"
               cursor="pointer"
-              bg={idx === 0 ? "purple.50" : "transparent"}
-              _hover={{ bg: "purple.50" }}
-              color={idx === 0 ? "purple" : "purple"}
-              borderTopRadius={"md"}
-              px="10"
-              py="2"
+              position="relative"
+              borderColor="purple"
+              paddingBottom={idx === 0 ? "7px" : "10px"}
+              borderBottomWidth={idx === 0 ? "3px" : "0px"}
+              bottom={idx === 0 ? "-1px" : "0px"}
+              _hover={{
+                borderBottomWidth: "3px",
+                paddingBottom: "7px",
+                bottom: "-1px",
+              }}
+              color="purple"
             >
               <Box display="inline-block" mr="3" color="purple">
                 {link.icon}

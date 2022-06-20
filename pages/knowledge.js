@@ -32,22 +32,22 @@ export default function Knowledge() {
           education.
         </Text>
 
-        <Flex
-          justify="space-between"
-          mb="10"
-          borderBottomWidth="1px"
-          borderColor="purple.50"
-        >
+        <Flex justify="space-between" mb="10" borderBottomWidth="1px">
           {links[2].children.map((link, idx) => (
             <Link
               href="/category"
               cursor="pointer"
               bg={"transparent"}
-              _hover={{ bg: "purple.50" }}
+              pb="10px"
+              _hover={{
+                borderBottomWidth: "3px",
+                borderColor: "purple",
+                paddingBottom: "7px",
+                position: "relative",
+                bottom: "-1px",
+              }}
               color="purple"
               borderTopRadius={"md"}
-              px="10"
-              py="2"
             >
               <Box display="inline-block" mr="3" color="purple">
                 {link.icon}
