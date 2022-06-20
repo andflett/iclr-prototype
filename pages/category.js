@@ -53,7 +53,7 @@ export default function Category() {
                 paddingBottom: "7px",
                 bottom: "-1px",
               }}
-              color="purple"
+              color={idx === 0 ? "purple" : "inherit"}
             >
               <Box display="inline-block" mr="3" color="purple">
                 {link.icon}
@@ -67,52 +67,69 @@ export default function Category() {
 
         <Grid gap={5} templateColumns="repeat(12, 1fr)">
           <GridItem colSpan={9}>
-            <Stack spacing="5" pr="5">
+            <Stack spacing="2" pr="5">
               <Link href="/article">
-                <Skeleton speed={2} height="100px" />
+                <Skeleton speed={2} height="25px" />
               </Link>
               <Link href="/article">
-                <Skeleton speed={2} height="100px" />
+                <Skeleton speed={2} height="10px" />
               </Link>
               <Link href="/article">
-                <Skeleton speed={2} height="100px" />
+                <Skeleton speed={2} height="10px" />
               </Link>
-              <HStack gap={5}>
-                <Button
-                  size="sm"
-                  variant={"outline"}
-                  color="gray.600"
-                  fontWeight="500"
-                >
-                  1
-                </Button>
-                <Button
-                  size="sm"
-                  variant={"outline"}
-                  color="gray.600"
-                  fontWeight="500"
-                >
-                  2
-                </Button>
-                <Button
-                  size="sm"
-                  variant={"outline"}
-                  color="gray.600"
-                  fontWeight="500"
-                >
-                  3
-                </Button>
-                <Button
-                  size="sm"
-                  color="gray.600"
-                  fontWeight="500"
-                  variant={"outline"}
-                  rightIcon={<FontAwesomeIcon icon={faArrowRight} />}
-                >
-                  Next page
-                </Button>
-              </HStack>
+              <Link href="/article">
+                <Skeleton speed={2} height="10px" />
+              </Link>
             </Stack>
+            <Stack spacing="2" pr="5" mt="8">
+              <Link href="/article">
+                <Skeleton speed={2} height="25px" />
+              </Link>
+              <Link href="/article">
+                <Skeleton speed={2} height="10px" />
+              </Link>
+              <Link href="/article">
+                <Skeleton speed={2} height="10px" />
+              </Link>
+              <Link href="/article">
+                <Skeleton speed={2} height="10px" />
+              </Link>
+            </Stack>
+            <HStack gap={5} mt="8">
+              <Button
+                size="sm"
+                variant={"outline"}
+                color="gray.600"
+                fontWeight="500"
+              >
+                1
+              </Button>
+              <Button
+                size="sm"
+                variant={"outline"}
+                color="gray.600"
+                fontWeight="500"
+              >
+                2
+              </Button>
+              <Button
+                size="sm"
+                variant={"outline"}
+                color="gray.600"
+                fontWeight="500"
+              >
+                3
+              </Button>
+              <Button
+                size="sm"
+                color="gray.600"
+                fontWeight="500"
+                variant={"outline"}
+                rightIcon={<FontAwesomeIcon icon={faArrowRight} />}
+              >
+                Next page
+              </Button>
+            </HStack>
           </GridItem>
 
           <GridItem colSpan={3}>

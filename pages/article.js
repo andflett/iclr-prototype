@@ -47,7 +47,7 @@ export default function Article() {
                 paddingBottom: "7px",
                 bottom: "-1px",
               }}
-              color="purple"
+              color={idx === 0 ? "purple" : "inherit"}
             >
               <Box display="inline-block" mr="3" color="purple">
                 {link.icon}

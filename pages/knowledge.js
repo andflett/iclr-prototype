@@ -46,7 +46,6 @@ export default function Knowledge() {
                 position: "relative",
                 bottom: "-1px",
               }}
-              color="purple"
               borderTopRadius={"md"}
             >
               <Box display="inline-block" mr="3" color="purple">
