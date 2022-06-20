@@ -32,10 +32,11 @@ export default function Knowledge() {
           education.
         </Text>
 
-        <Flex justify="space-between" mb="10" borderBottomWidth="1px">
+        <Flex mb="10" borderBottomWidth="1px">
           {links[2].children.map((link, idx) => (
             <Link
-              href="/category"
+              mr="20"
+              href={link.href}
               cursor="pointer"
               bg={"transparent"}
               pb="10px"
@@ -46,7 +47,6 @@ export default function Knowledge() {
                 position: "relative",
                 bottom: "-1px",
               }}
-              borderTopRadius={"md"}
             >
               <Box display="inline-block" mr="3" color="purple">
                 {link.icon}
@@ -59,7 +59,7 @@ export default function Knowledge() {
         </Flex>
 
         <Grid gap={5} templateColumns="repeat(12, 1fr)">
-          <GridItem colSpan={9}>
+          <GridItem colSpan={9} pr="5">
             <SimpleGrid columns={2} gap="10">
               {links[2].children.map((link, idx) => (
                 <Stack pr="5">

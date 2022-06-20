@@ -38,10 +38,11 @@ export default function Category() {
           education.
         </Text>
 
-        <Flex justify="space-between" mb="10" borderBottomWidth="1px">
+        <Flex mb="10" borderBottomWidth="1px">
           {links[2].children.map((link, idx) => (
             <Link
-              href="/category"
+              mr="20"
+              href={link.href}
               cursor="pointer"
               position="relative"
               borderColor="purple"
